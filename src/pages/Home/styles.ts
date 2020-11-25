@@ -36,17 +36,23 @@ export const BehindLogo = styled.Image`
 `;
 
 export const TextInfo = styled.Text`
+  font-family: 'Rubik-Regular';
   color: #ff6680;
+  font-weight: 400;
   font-size: 36px;
-  max-width: 225px;
+  max-width: 235px;
+  line-height: 42px;
   margin-top: 8%;
 `;
 
 export const TextSub = styled.Text`
+  font-family: 'Roboto-Regular';
+  font-weight: 400;
   margin-top: 3%;
-  max-width: 225px;
+  max-width: 190px;
   color: #edebf5;
   font-size: 15px;
+  line-height: 25px;
 `;
 
 export const ButtonLogin = styled.TouchableOpacity`
@@ -58,7 +64,12 @@ export const ButtonLogin = styled.TouchableOpacity`
   /* Pink */
   background: #ff6680;
   border-radius: 100px;
-  margin-top: 25px;
+  margin-top: 15px;
 `;
 
-export const ButtonLoginText = styled.Text``;
+export const ButtonLoginText = styled.Text`
+  font-family: 'Roboto-Medium';
+  font-size: 15px;
+  line-height: 17px;
+  color: #fff;
+`;
