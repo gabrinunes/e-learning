@@ -11,11 +11,13 @@
 import React from 'react';
 
 import Home from './src/pages/Home/index';
+import Header from './src/components/Header';
+import Courses from './src/pages/Courses';
 
 declare const global: {HermesInternal: null | {}};
 
 const App = () => {
-  return <Home />;
+  return <Courses />;
 };
 
 export default App;
