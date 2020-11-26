@@ -25,7 +25,7 @@ const Header: React.FC = () => {
             position: 'absolute',
             alignSelf: 'flex-end',
             right: 25,
-            top: 34,
+            top: 27,
           }}
         />
         <ContainerSearchBox>
