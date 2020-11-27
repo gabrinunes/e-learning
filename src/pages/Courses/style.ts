@@ -23,3 +23,9 @@ export const CoursesNumber = styled.Text`
   align-self: flex-end;
   padding: 28px;
 `;
+
+export const TabStyle = styled.View`
+  flex: 1;
+  flex-direction: row;
+  background-color: #fff;
+`;

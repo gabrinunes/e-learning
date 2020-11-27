@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 
 import {
   Container,
@@ -16,8 +16,14 @@ import logo from '../../assets/e.learninge-logo.png';
 
 import logoScreen from '../../assets/logo.png';
 import {Image, Text} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 const Home: React.FC = () => {
+  const {navigate} = useNavigation();
+
+  const navigateToCourses = useCallback(() => {
+    navigate('Courses');
+  }, [navigate]);
   return (
     <Container>
       <BehindLogo source={logo} />
@@ -29,7 +35,7 @@ const Home: React.FC = () => {
         <TextSub>
           Entre na plataforma e acesse cursos de diversas áreas de conhecimento.
         </TextSub>
-        <ButtonLogin>
+        <ButtonLogin onPress={navigateToCourses}>
           <ButtonLoginText>Começar os estudos</ButtonLoginText>
         </ButtonLogin>
       </ContainerTexts>

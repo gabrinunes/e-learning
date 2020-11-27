@@ -1,12 +1,23 @@
 import React from 'react';
 
-import {Container, Card, CourseName, NumbersOfLessons} from './styles';
+import {
+  Container,
+  Card,
+  CourseName,
+  NumbersOfLessons,
+  CategoryText,
+  CoursesNumber,
+} from './styles';
 import {Image, Text, FlatList} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 import iconCard from '../../assets/English.png';
 
-const Cards: React.FC = () => {
+interface SidebarProps {
+  text?: boolean;
+}
+
+const Cards: React.FC<SidebarProps> = ({text}) => {
   const DATA = [
     //Testando Lista
     {
@@ -28,23 +39,46 @@ const Cards: React.FC = () => {
   ];
   return (
     <Container>
-      <FlatList
-        data={DATA}
-        numColumns={2}
-        renderItem={({item}) => (
-          <Card>
-            <Image source={iconCard} />
-            <CourseName>{item.title}</CourseName>
-            <NumbersOfLessons>16 aulas</NumbersOfLessons>
-            <Icon
-              name="trash"
-              size={20}
-              color="#C4C4D1"
-              style={{position: 'absolute', top: 15, right: 20}}
-            />
-          </Card>
-        )}
-      />
+      {!text ? (
+        <>
+          <CategoryText>Categorias</CategoryText>
+          <CoursesNumber>4 cursos</CoursesNumber>
+        </>
+      ) : (
+        <CategoryText>Cursos Salvos</CategoryText>
+      )}
+      {text ? (
+        <FlatList
+          data={DATA}
+          numColumns={2}
+          renderItem={({item}) => (
+            <Card>
+              <Image source={iconCard} />
+              <CourseName>{item.title}</CourseName>
+              <NumbersOfLessons>16 aulas</NumbersOfLessons>
+
+              <Icon
+                name="trash"
+                size={20}
+                color="#C4C4D1"
+                style={{position: 'absolute', top: 15, right: 20}}
+              />
+            </Card>
+          )}
+        />
+      ) : (
+        <FlatList
+          data={DATA}
+          numColumns={2}
+          renderItem={({item}) => (
+            <Card>
+              <Image source={iconCard} />
+              <CourseName>{item.title}</CourseName>
+              <NumbersOfLessons>16 aulas</NumbersOfLessons>
+            </Card>
+          )}
+        />
+      )}
     </Container>
   );
 };

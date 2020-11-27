@@ -31,3 +31,22 @@ export const NumbersOfLessons = styled.Text`
   color: #c4c4d1;
   margin-top: 4px;
 `;
+
+export const CategoryText = styled.Text`
+  font-family: 'Rubik-Regular';
+  font-size: 20px;
+  line-height: 23px;
+  padding: 24px;
+  right: 5%;
+`;
+
+export const CoursesNumber = styled.Text`
+  position: absolute;
+  font-family: 'Roboto-Regular';
+  font-size: 15px;
+  line-height: 17px;
+  color: #a0a0b2;
+  align-self: flex-end;
+  top: 12.5%;
+  right: 8%;
+`;
