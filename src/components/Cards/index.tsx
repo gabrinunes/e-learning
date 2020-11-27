@@ -29,11 +29,19 @@ const Cards: React.FC<SidebarProps> = ({text}) => {
       title: 'Second Item',
     },
     {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
+      id: '58694a0f-3da1-471f-bd96-145571e29d76472',
       title: 'Third Item',
     },
     {
-      id: '58694a0f-3da1-471f-bd96-145571e29d72',
+      id: '58694a0f-3da1-471f-bd96-145571e29d7892',
+      title: 'Third Item',
+    },
+    {
+      id: '58694a0f-3da1-471f-bd96-145571e29d723',
+      title: 'Third Item',
+    },
+    {
+      id: '58694a0f-3da1-471f-bd96-145571e29d712',
       title: 'Third Item',
     },
   ];
