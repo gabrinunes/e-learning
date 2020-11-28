@@ -27,6 +27,7 @@ const Courses: React.FC = () => {
             },
             activeTintColor: '#FF6680',
             inactiveTintColor: '#C4C4D1',
+            style: {height: 70},
             tabStyle: {
               flexDirection: 'row',
               right: 20,
@@ -42,7 +43,7 @@ const Courses: React.FC = () => {
                   color={color}
                   style={{
                     position: 'absolute',
-                    bottom: 36,
+                    bottom: 57,
                   }}
                 />
               ),
@@ -59,7 +60,7 @@ const Courses: React.FC = () => {
                   color={color}
                   style={{
                     position: 'absolute',
-                    bottom: 36,
+                    bottom: 57,
                   }}
                 />
               ),

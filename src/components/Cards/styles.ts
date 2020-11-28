@@ -1,16 +1,20 @@
 import styled from 'styled-components/native';
 
+import {Dimensions} from 'react-native';
+
+const widthCard = Dimensions.get('window').width;
+
 export const Container = styled.View`
-  padding: 20px;
+  padding: 18px;
   bottom: 24px;
 `;
 
 export const Card = styled.View`
-  width: 45%;
+  width: ${widthCard * 0.42};
   height: 172px;
   background: #ffffff;
   border-radius: 16px;
-  margin: 3px 16px 10px 1px;
+  margin: 7px;
   align-items: center;
   justify-content: center;
 `;

@@ -12,6 +12,7 @@ import {Image, Text, FlatList} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 import iconCard from '../../assets/English.png';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 interface SidebarProps {
   text?: boolean;
@@ -59,6 +60,7 @@ const Cards: React.FC<SidebarProps> = ({text}) => {
         <FlatList
           data={DATA}
           numColumns={2}
+          showsVerticalScrollIndicator={false}
           renderItem={({item}) => (
             <Card>
               <Image source={iconCard} />
@@ -70,6 +72,7 @@ const Cards: React.FC<SidebarProps> = ({text}) => {
                 size={20}
                 color="#C4C4D1"
                 style={{position: 'absolute', top: 15, right: 20}}
+                onPress={() => console.log('bla')}
               />
             </Card>
           )}
@@ -78,12 +81,15 @@ const Cards: React.FC<SidebarProps> = ({text}) => {
         <FlatList
           data={DATA}
           numColumns={2}
+          showsVerticalScrollIndicator={false}
           renderItem={({item}) => (
-            <Card>
-              <Image source={iconCard} />
-              <CourseName>{item.title}</CourseName>
-              <NumbersOfLessons>16 aulas</NumbersOfLessons>
-            </Card>
+            <TouchableOpacity>
+              <Card>
+                <Image source={iconCard} />
+                <CourseName>{item.title}</CourseName>
+                <NumbersOfLessons>16 aulas</NumbersOfLessons>
+              </Card>
+            </TouchableOpacity>
           )}
         />
       )}
