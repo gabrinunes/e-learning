@@ -8,17 +8,19 @@ import {
   CategoryText,
   CoursesNumber,
 } from './styles';
-import {Image, Text, FlatList} from 'react-native';
+import {Image, Text, FlatList, View} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 import iconCard from '../../assets/English.png';
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import {useNavigation} from '@react-navigation/native';
 
 interface SidebarProps {
   text?: boolean;
 }
 
 const Cards: React.FC<SidebarProps> = ({text}) => {
+  const {navigate} = useNavigation();
   const DATA = [
     //Testando Lista
     {
@@ -83,7 +85,7 @@ const Cards: React.FC<SidebarProps> = ({text}) => {
           numColumns={2}
           showsVerticalScrollIndicator={false}
           renderItem={({item}) => (
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigate('ListCourses')}>
               <Card>
                 <Image source={iconCard} />
                 <CourseName>{item.title}</CourseName>

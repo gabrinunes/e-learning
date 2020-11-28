@@ -4,6 +4,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import Home from '../pages/Home';
 import Courses from '../pages/Courses';
+import ListCourses from '../pages/ListCourses';
 import {NavigationContainer} from '@react-navigation/native';
 
 const App = createStackNavigator();
@@ -19,6 +20,7 @@ const AppRoutes: React.FC = () => (
         }}>
         <App.Screen name="Home" component={Home} />
         <App.Screen name="Courses" component={Courses} />
+        <App.Screen name="ListCourses" component={ListCourses} />
       </App.Navigator>
     </NavigationContainer>
   </>

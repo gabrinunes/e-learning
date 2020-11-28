@@ -50,6 +50,6 @@ export const CoursesNumber = styled.Text`
   line-height: 17px;
   color: #a0a0b2;
   align-self: flex-end;
-  top: 12.5%;
+  margin-top: 44px;
   right: 8%;
 `;
